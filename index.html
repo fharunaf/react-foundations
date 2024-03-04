@@ -7,6 +7,43 @@
     <link href="style.css" rel="stylesheet" media="screen">
 </head>
 <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const app = document.getElementById('app');
+      const root = ReactDOM.createRoot(app);
+      root.render(<h1>Develop. Preview. Ship.</h1>);
+    </script>
+    createRoot は、ブラウザの DOM ノード内に React コンポーネントを表示するためのルートを作成します。
+    <div id="add"></div>
+    <button onclick="addText()">ボタン</button>
+    <script>
+        function addText() {
+            const text = '追加';
+            const add = document.createTextNode(text);
+            document.getElementById('add').appendChild(add);
+        }
+    </script>
+    <div id="app2">javascript</div>
+    <script type="text/javascript">
+      // Select the div element with 'app' id
+      const app2 = document.getElementById('app2');
+ 
+      // Create a new H1 element
+      const header = document.createElement('h1');
+ 
+      // Create a new text node for the H1 element
+      const text = 'Develop. Preview. Ship.';
+      const headerContent = document.createTextNode(text);
+ 
+      // Append the text to the H1 element
+      header.appendChild(headerContent);
+ 
+      // Place the H1 element inside the div
+      app2.appendChild(header);
+    </script>
     <div>
         <span>btn-item1</span>
         <a href="/" class="btn btn-item1">
@@ -34,17 +71,5 @@
             <span>scroll</span>
         </a>
     </div>
-    <body>
-        <div id="app"></div>
-        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-        <script type="text/javascript">
-          const app = document.getElementById('app');
-          const header = document.createElement('h1');
-          const text = 'Develop. Preview. Ship.';
-          const headerContent = document.createTextNode(text);
-          header.appendChild(headerContent);
-          app.appendChild(header);
-        </script>
 </body>
 </html>
