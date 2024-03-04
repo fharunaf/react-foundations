@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <div>
+        <span>btn-item1</span>
+        <a href="/" class="btn btn-item1">
+            <span>hovorして!</span>
+            <span>clickして!</span>
+        </a>
+    </div>
+    <div>
+        <span>btn-item2</span>
+        <a href="/" class="btn btn-item2">
+            <span>hovorして!</span>
+            <span>clickして!</span>
+        </a>
+    </div>
+    <div>
+        <span>btn-item3</span>
+        <a href="/" class="btn btn-item3">
+            <span>hovorして!</span>
+            <span>clickして!</span>
+        </a>
+    </div>
+    <div>
+        <span>スクロールバー</span>
+        <a href="/" class="scrollBar">
+            <span>scroll</span>
+        </a>
+    </div>
+    <body>
+        <div id="app"></div>
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script type="text/javascript">
+          const app = document.getElementById('app');
+          const header = document.createElement('h1');
+          const text = 'Develop. Preview. Ship.';
+          const headerContent = document.createTextNode(text);
+          header.appendChild(headerContent);
+          app.appendChild(header);
+        </script>
+</body>
+</html>
