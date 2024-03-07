@@ -44,7 +44,6 @@
 }
 
 .btn-item3 span {
-  transform-style: preserve-3d;
   transition: rotate 1s;
   transform-origin: 0 center -1.5rem;
 }
@@ -91,4 +90,34 @@
     transform-origin: 0 100%;
     scale: 1 0;
   }
+}
+.card {
+  cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+.card .front,
+.card .back {
+  color: #fff;
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  backface-visibility: hidden;
+  transition: transform 1s;
+}
+.card .front {
+  background-color: #333333;
+  transform: rotateY(0deg);
+}
+.card .back {
+  background-color: #9eabc6;
+  transform: rotateY(180deg);
+}
+.card:hover > .front {
+  transform: rotateY(180deg);
+}
+.card:hover > .back {
+  transform: rotateY(0deg);
 }/*# sourceMappingURL=style.css.map */

@@ -54,7 +54,7 @@
 }
 .btn-item3 {
     span {
-        transform-style: preserve-3d;
+        //transform-style: preserve-3d;
         transition: rotate 1s;
         transform-origin: 0 center -1.5rem;
         &:nth-child(2) {
@@ -104,5 +104,38 @@
     100% {
         transform-origin: 0 100%;
         scale: 1 0;
+    }
+}
+.card {
+    cursor: pointer;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    .front,
+    .back {
+        color: #fff;
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        backface-visibility: hidden;
+        transition: transform 1s;
+        //transform-style: preserve-3d;
+    }
+    .front {
+        background-color: #333333;
+        transform: rotateY(0deg);
+    }
+    .back {
+        background-color: #9eabc6;
+        transform: rotateY(180deg);
+    }
+    &:hover {
+        > .front {
+            transform: rotateY(180deg);
+        }
+        > .back {
+            transform: rotateY(0deg);
+        }
     }
 }
