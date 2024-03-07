@@ -19,6 +19,11 @@
       }
       function HomePage() {
         const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+        const [likes, setLikes] = React.useState(0);
+        function handleClick() {
+            setLikes(likes + 1);
+        }
+
         return (
           <div>
             <Header title="Develop. Preview. Ship." />
@@ -27,6 +32,7 @@
                     <li key={name}>{name}</li>
                 ))}
             </ul>
+            <button onClick={handleClick}>Like({likes})</button>
           </div>
         );
       }
@@ -36,9 +42,9 @@
     <div id="add"></div>
     <button onclick="addText()">ボタン</button>
     <script>
-            const item = document.createElement('h1');
-            item.textContent = 'text追加';
-            document.getElementById('add').appendChild(item);
+        const item = document.createElement('h1');
+        item.textContent = 'hello';
+        document.getElementById('add').appendChild(item);
         function addText() {
             const text = '追加';
             const add = document.createTextNode(text);
@@ -95,6 +101,14 @@
         <a href="/" class="scrollBar">
             <span>scroll</span>
         </a>
+    </div>
+    <div class="card">
+        <div class="front">
+          <p>前です</p>
+        </div>
+        <div class="back">
+            <p>後ろです</p>
+        </div>
     </div>
 </body>
 </html>
