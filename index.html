@@ -13,13 +13,20 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
       const app = document.getElementById('app');
-      function Header() {
-        return <h1>Develop. Preview. Ship.</h1>
+      function Header({ title }) {
+        console.log(title);
+        return <h1>{title}</h1>;
       }
       function HomePage() {
+        const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
         return (
           <div>
-            <Header />
+            <Header title="Develop. Preview. Ship." />
+            <ul>
+                {names.map((name) => (
+                    <li key={name}>{name}</li>
+                ))}
+            </ul>
           </div>
         );
       }
@@ -29,6 +36,9 @@
     <div id="add"></div>
     <button onclick="addText()">ボタン</button>
     <script>
+            const item = document.createElement('h1');
+            item.textContent = 'text追加';
+            document.getElementById('add').appendChild(item);
         function addText() {
             const text = '追加';
             const add = document.createTextNode(text);
@@ -36,6 +46,8 @@
         }
     </script>
     <div id="app2">javascript</div>
+    <div id="app3"></div>
+    
     <script type="text/javascript">
       // Select the div element with 'app' id
       const app2 = document.getElementById('app2');
@@ -52,6 +64,10 @@
  
       // Place the H1 element inside the div
       app2.appendChild(header);
+      
+      const addElement = document.createElement('h2');
+      addElement.textContent =  '2Develop. Preview. Ship.';
+      document.getElementById('app3').appendChild(addElement);
     </script>
     <div>
         <span>btn-item1</span>
