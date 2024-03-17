@@ -8,31 +8,96 @@
 </head>
 <body>
     <div id="app"></div>
-    
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/jsx">
-        function Avatar() {
-            return (
-              <img
-                className="avatar"
-                src="https://i.imgur.com/1bX5QH6.jpg"
-                alt="Lin Lanying"
-                width={100}
-                height={100}
-              />
-            );
-          }
-          
-          export default function Profile() {
-            return (
-              <Avatar />
-            );
-          }
-
-      
       
     </script>
+
+    <p>
+      Essential JavaScript for React
+        While you can learn JavaScript and React at the same time, being familiar with JavaScript can make the process of learning React easier.
+
+        In the next sections, you will be introduced to some core concepts of React from a JavaScript perspective. Here's a summary of the JavaScript topics that will be mentioned:
+
+        Functions and Arrow Functions
+        Objects
+        Arrays and array methods
+        Destructuring
+        Template literals
+        Ternary Operators
+        ES Modules and Import / Export Syntax
+        While this course does not dive into JavaScript, it's good practice to stay up to date with the latest versions of JavaScript. But if you don't feel proficient in JavaScript yet, don't let this hinder you from starting to build with React!
+
+        It’s time to take a quiz!
+        Test your knowledge and see what you’ve just learned.
+    </p>
+    <p>Functionの基本:
+
+      名前が add で、2つの引数を受け取り、それらを加算して結果を返す関数を作成してください。
+      この関数を使用して、5と3を加算した結果を出力してください。
+      Functionの引数:
+      
+      名前が greet で、1つの引数 name を受け取り、"Hello, {name}!" というメッセージを返す関数を作成してください。
+      この関数を使用して、自分の名前を引数として渡し、挨拶を表示してください。
+      Arrow Functionの基本:
+
+      Arrow Functionを使用して、名前が multiply で、2つの引数を受け取り、それらを掛け算して結果を返す関数を作成してください。
+      この関数を使用して、10と4を掛けた結果を出力してください。</p>
+      <script type="text/javascript">
+        function add(a,b) {
+          return a + b;
+        }
+        console.log(add(5,3));  
+        function greet(name) {
+          return "Hello," + name + "!";
+        }
+        console.log(greet("haruna"));
+        const multiiply = (mu , be) => {
+          return mu * be ;
+        }
+        console.log(multiiply(10,4));
+      </script>
+      
+      <p>Arrow Functionの引数:
+
+        Arrow Functionを使用して、名前が greetShort で、1つの引数 name を受け取り、"Hi, {name}!" というメッセージを返す関数を作成してください。
+        この関数を使用して、友人の名前を引数として渡し、挨拶を表示してください。
+        関数のデフォルト引数:
+        
+        名前が calculateArea で、引数 radius と pi を受け取り、円の面積を計算して返す関数を作成してください。pi のデフォルト値は3.14としてください。
+        この関数を使用して、半径が5の円の面積を計算して表示してください。
+        無名関数とコールバック関数:
+        
+        無名関数を使用して、配列 [1, 2, 3, 4, 5] の各要素に2を掛ける関数を作成してください。
+        map() メソッドを使用して、この関数を配列に適用し、新しい配列を作成してください。結果を出力してください。</p>
+        <script type="text/javascript">
+          const greetShort = (name) => {
+            return "hi," + name + "!";
+          }
+          console.log(greetShort("kiro")) ;
+
+          const calculateArea = (radius, pi=3.14) => {
+            return pi * radius * radius;
+          }
+          console.log(calculateArea(5));
+
+          const numbers = [1, 2, 3, 4, 5];
+          const multipliedNumbers = numbers.map((num) => {
+            return num * 2;
+          });
+          console.log(multipliedNumbers);
+
+
+          const words = ["apple", "banana", "orange", "strawberry", "kiwi"];
+          const lengths = words.map((word) => {
+            return word.length;
+          });
+          console.log(lengths);
+
+          const words2 = ["apple", "banana", "orange", "strawberry", "kiwi"];
+          const firstChar = words2.map((word) => {
+            return word.charAt(1);
+            //return word[0];
+          });
+          console.log(firstChar);
+        </script>
 </body>
 </html>
