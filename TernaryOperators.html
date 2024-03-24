@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <div id="app"></div>
+    <p>
+        問題:
+        以下の配列の各要素について、2を掛けた数が6以上の場合にのみ新しい配列に追加する関数を作成してください。
+        
+        javascript
+        Copy code
+        const numbers = [1, 2, 3, 4, 5];</p>
+    <script>
+        const numbers = [1, 2, 3, 4, 5];
+
+        const multipliedNumbers = numbers.filter((num) => {
+            return num * 2 >= 6;
+        }).map((num) => {
+            return num * 2;
+        });
+
+        console.log(multipliedNumbers);
+
+    </script>
+    
+
+    <p>
+      キーと値のペアを持つオブジェクトを作成します。
+このオブジェクトは、学生の情報を表現します。以下のプロパティを含めてください:
+name: 文字列型の学生の名前
+age: 数値型の学生の年齢
+grade: 文字列型の学生の学年（例: "1年生"、"2年生"）
+subjects: 配列型の学生の履修科目
+作成したオブジェクトの情報をコンソールに出力してください。
+    </p>
+    <script type="text/javascript">
+        const student = {};
+        student.name = "nami";
+        student.age = 16;
+        student.grade = "1年生";
+        student.subjects =  ["国語","数学","理科"];
+
+        console.log(product.name,product.age,product.grade,product.subjects);
+    </script>
+    <p>以下の要件を満たす三項演算子を使用したコードを作成してください。
+
+      変数 score が 80 以上の場合、変数 result に文字列 "Pass" を代入します。
+      変数 score が 80 未満の場合、変数 result に文字列 "Fail" を代入します。
+      最終的な結果をコンソールに出力してください。
+      提供されたコードの例として、score の値を変えていくつかのテストケースを試してください。</p>
+      <script type="text/javascript">
+        // スコアに応じて Pass または Fail を返す関数
+        const getResult = (score) => {
+            return score >= 80 ? "Pass" : "Fail";
+        };
+
+        // テストケースを実行して結果を出力する
+        console.log(getResult(2));   // 出力: Fail
+        console.log(getResult(81));  // 出力: Pass
+
+     </script>
+     <p>問題:
+        以下の要件を満たす三項演算子を使用したコードを作成してください。
+        
+        1. 変数 `temperature` に現在の気温（摂氏）が代入されています。
+        2. 気温が 25 度以上の場合、変数 `message` に文字列 "暑いです" を代入します。
+        3. 気温が 15 度以上 25 度未満の場合、変数 `message` に文字列 "快適です" を代入します。
+        4. 気温が 15 度未満の場合、変数 `message` に文字列 "寒いです" を代入します。
+        5. 最終的な結果をコンソールに出力してください。
+        
+        提供されたコードの例として、`temperature` の値を変えていくつかのテストケースを試してください。</p>
+    <script>
+        const temperature = 20;
+const message = temperature >= 25 ? "暑いです" : (temperature >= 15 ? "快適です" : "寒いです");
+console.log(message); // 出力: 快適です
+
+    </script>
+    <p>
+        問題:
+        以下の要件を満たす関数を作成してください。
+        
+        1. 関数名は `getDiscount` とします。
+        2. 関数は引数として商品の価格を受け取ります。
+        3. 商品の価格が 1000 円以上の場合、20% の割引が適用されます。関数は割引後の価格を返します。
+        4. 商品の価格が 1000 円未満の場合、割引は適用されません。関数は元の価格をそのまま返します。
+        
+        提供されたコードの例として、関数を呼び出していくつかのテストケースを実行し、結果をコンソールに出力してください。</p>
+        <script>
+            const getDiscount = (price) => {
+                return price >= 1000 ? price * 0.8 : price;
+            }
+            console.log(getDiscount(1000));
+        </script>
+        <p>
+            問題:
+            以下の要件を満たす関数を作成してください。
+            
+            1. 関数名は `calculateTotal` とします。
+            2. 関数は引数として商品の価格と数量を受け取ります。
+            3. 商品の価格と数量を掛け合わせた合計金額を計算します。
+            4. 合計金額が 5000 円以上の場合、5% の割引が適用されます。関数は割引後の合計金額を返します。
+            5. 合計金額が 5000 円未満の場合、割引は適用されません。関数は元の合計金額をそのまま返します。
+            
+            提供されたコードの例として、関数を呼び出していくつかのテストケースを実行し、結果をコンソールに出力してください。</p>
+            <script>
+                const calculateTotal = (price,quantity) => {
+                    return price >= 5000 ? price * quantity * 0.95 : price * quantity;
+                }
+                console.log(calculateTotal(5000,20));
+            </script>
+</body>
+</html>
