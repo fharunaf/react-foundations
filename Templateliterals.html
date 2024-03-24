@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <p>理解が深まるよう、タグ付きテンプレートの例を使った問題を提供します。
+
+        問題:
+        以下の要件を満たすタグ付きテンプレート関数 `highlight` を作成してください。
+        
+        1. `highlight` 関数は、文字列の配列と変数（`...values`）を受け取ります。
+        2. `highlight` 関数は、受け取った文字列配列の各要素と変数を交互に結合して新しい文字列を作成します。ただし、変数に対しては以下のルールに基づいて処理を行います。
+            - 変数が偶数番目の場合、その値を太字にします。
+            - 変数が奇数番目の場合、その値を通常のテキストとして扱います。
+        3. 最終的な結果を返します。
+        
+        提供されたコードの例として、`highlight` 関数を呼び出していくつかのテストケースを実行し、結果をコンソールに出力してください。
+        
+        例:
+        ```javascript
+        const result = highlight`Today is ${"sunny"}, the temperature is ${20} degrees Celsius, and the humidity is ${"high"}.`;
+        console.log(result);
+        // 出力:
+        // Today is sunny, the temperature is 20 degrees Celsius, and the humidity is high.
+        ```
+        
+        提供されたテンプレート文字列と変数に対して、偶数番目の変数（`${20}`）は太字に、奇数番目の変数（`${"sunny"}`、`${"high"}`）は通常のテキストとして扱われます。</p>
+
+        <p>理解を深めるための問題を提供します。以下の問題では、`i++` と `+=` の使い方について考えることができます。
+
+            問題:
+            1から10までの整数が含まれる配列 `numbers` があります。配列の各要素に1を加え、その合計を計算してください。
+            
+            提供された配列 `numbers` は以下の通りです:
+            ```javascript
+            const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            ```
+            
+            この問題を解決するために、`i++` または `+=` のいずれかを使用してください。また、それぞれの方法を使用した場合の結果を比較してください。
+            
+            提供された配列 `numbers` の各要素に1を加え、その合計を計算するためのコードを作成してください。</p>
+            <script>
+                const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+                function newnNmbers(numbers) {
+                    for (var i = 0; i < numbers.length; i++) {
+                        return numbers += length(numbers[i]);
+                    }
+                }   
+            </script>
+</body>
+</html>
