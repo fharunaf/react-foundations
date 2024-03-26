@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+問題:
+1. 1から10までの整数が含まれる配列 `numbers` があります。この配列から偶数だけを取り出して新しい配列 `evenNumbers` を作成してください。
+2. 新しい配列 `evenNumbers` の要素をすべて足し合わせた合計を計算し、その値をコンソールに出力してください。
+
+この問題を解決するために、`for` ループや配列のメソッドなどを活用してください。また、各ステップのコードを分割して段階的に解決してみてください。
+
+<script>
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    function sumEvenNumbers(numbers) {
+        const evenNumbers = [];
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 !== 0) {
+                evenNumbers.push(numbers[i]);
+            }
+        }
+        const sum = evenNumbers.reduce((total,num) => total + num,0);
+        return sum;
+    }
+    const totalSum = sumEvenNumbers(numbers);
+    console.log(totalSum);
+</script>
+<!--
+<script>
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    function sumEvenNumbers(numbers) {
+        // 偶数だけをフィルタリングして新しい配列を作成
+        const evenNumbers = numbers.filter(num => num % 2 === 0);
+        // 偶数の合計を計算
+        const sum = evenNumbers.reduce((total, num) => total + num, 0);
+        return sum;
+    }
+
+    const totalSum = sumEvenNumbers(numbers);
+    console.log(totalSum); // 偶数の合計をコンソールに出力
+
+
+</script>
+<script>
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+    function sumEvenNumbers(numbers) {
+        const evenNumbers = []; // 空の配列を作成して偶数を追加します
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 === 0) { // 数字が偶数かどうかを確認します
+                evenNumbers.push(numbers[i]); // 偶数なら配列に追加します
+            }
+        }
+        return evenNumbers; // 偶数のみを含む配列を返します
+    }
+
+    const evenNumbers = sumEvenNumbers(numbers);
+    console.log(evenNumbers);
+
+</script>
+-->
+<p>わからなかったこと</p>
+<p>reduce メソッド</p>
+<p>配列.reduce(function(累積値, 要素, インデックス番号, 配列) { })</p>
+<p>
+
+    例えば、友達がアイスクリームの費用を集めています。彼らの名前と集めた金額を配列で表すことができます。
+    
+    ```javascript
+    const friends = [
+        { name: "太郎", amount: 500 },
+        { name: "花子", amount: 700 },
+        { name: "次郎", amount: 300 },
+        { name: "三郎", amount: 600 }
+    ];
+    ```
+    
+    これらの友達が集めた金額を合計するには、`reduce` メソッドを使用します。
+    
+    ```javascript
+    const totalAmount = friends.reduce((sum, friend) => sum + friend.amount, 0);
+    ```
+    
+    ここでの処理は次の通りです。
+    
+    - `sum`: 現在の合計金額です。最初は0から始まります。
+    - `friend`: 現在の友達の情報です。名前と集めた金額が含まれています。
+    
+    最初の処理では、`sum` は0で初期化されます。次に、各友達の金額が `sum` に加算されていきます。
+    
+    例えば、太郎が500円、花子が700円、次郎が300円、三郎が600円を集めている場合、合計金額は次のように計算されます。
+    
+    ```
+    0 + 500 (太郎) = 500
+    500 + 700 (花子) = 1200
+    1200 + 300 (次郎) = 1500
+    1500 + 600 (三郎) = 2100
+    ```
+    
+    したがって、最終的な合計金額は2100円となります。
+    
+    この例では、`reduce` メソッドを使って友達が集めた金額を合計しています。このメソッドを理解するには、各ステップでの合計金額の変化を追跡することが重要です。</p>
+</body>
+</html>
