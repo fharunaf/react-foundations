@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>問題: 与えられた配列 `numbers` の各要素に対して、偶数なら2倍にし、奇数なら3倍にした新しい配列を作成してください。
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    </p>
+    <script>
+        const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        const transformedArray = numbers.map((num) => {
+            return num % 2 === 0 ? num * 2 : num * 3;
+        });
+        console.log(transformedArray);
+    </script>
+    <p>問題: 与えられた配列 names に含まれる各文字列の長さを計算し、その長さを含む新しい配列を作成してください。
+        const names = ["Alice", "Bob", "Charlie", "David", "Eve"];
+    </p>
+    <script>
+        const names = ["Alice", "Bob", "Charlie", "David", "Eve"];
+        const namelength = names.map((name) => {
+            return name.length;
+        });
+        console.log(namelength);
+    </script>
+    <p>問題: 与えられた配列 words 内の各単語を逆順にして、新しい配列を作成してください。</p>
+    <script>
+        const words = ["apple", "banana", "orange", "strawberry", "kiwi"];
+
+        const reversedWords = words.map((word) => {
+            const reversedWord = word.split("").reverse().join("");
+            return reversedWord;
+        });
+        console.log(reversedWords);
+    </script>
+    <p>問題: 与えられた配列 articles には、各記事のタイトルとURLが含まれています。各記事の情報を元に、記事のリンクを含むHTMLコードを生成してください。</p>
+    <ul id="list">
+        <li></li>
+    </ul>
+    <script>
+        const articles = [
+            { title: "JavaScript Basics", url: "https://example.com/javascript-basics" },
+            { title: "HTML & CSS Tutorial", url: "https://example.com/html-css-tutorial" },
+            { title: "React Crash Course", url: "https://example.com/react-crash-course" }
+        ];
+        const articleLinks = articles.map((article) => {
+            return `<li><a href="${article.url}">${article.title}</a></li>`;
+        });
+        const ulElement = document.getElementById("list");
+        ulElement.innerHTML = articleLinks.join(""); 
+    </script>
+    <p>問題: 与えられた menuItems 配列には、各メニュー項目の名前と価格が含まれています。各メニュー項目の情報を元に、メニューのリストを生成してください。各項目は li タグで囲まれ、名前と価格が表示されるようにします。</p>
+    <div id="menu">
+
+    </div>
+    <script>
+        const menuItems = [
+        { name: "Cheeseburger", price: 8.99 },
+        { name: "Fries", price: 2.99 },
+        { name: "Soda", price: 1.50 },
+        { name: "Salad", price: 5.99 }
+        ];
+        const menuItemsWrap = menuItems.map((item) => {
+            return `<li>${item.name}: $${item.price.toFixed(2)}</li>`;
+        });
+        const ulElementList = document.getElementById("menu");
+        ulElementList.innerHTML = `<ul>${menuItemsWrap.join("")}</ul>`;
+    </script>
+<p>わからなかったこと</p>
+<p>map() メソッド</p>
+<p>分かりやすい例えとして、果物のリストを考えてみましょう。例えば、次のような果物のリストがあるとします。
+
+    ```javascript
+    const fruits = ["apple", "banana", "orange", "strawberry"];
+    ```
+    
+    この果物のリストに対して、各果物名の先頭に "delicious" を追加した新しいリストを作成したいとします。ここで `map` メソッドを使用すると、簡単にこの操作を行うことができます。
+    
+    ```javascript
+    const deliciousFruits = fruits.map((fruit) => {
+        return "delicious " + fruit;
+    });
+    
+    console.log(deliciousFruits);
+    // 出力: ["delicious apple", "delicious banana", "delicious orange", "delicious strawberry"]
+    ```
+    
+    この例では、`map` メソッドを使用して元の果物のリストから新しいリストを生成しました。各果物名に "delicious " を追加する操作が、各要素に適用され、新しいリストが作成されました。これにより、元のリストを変更せずに、各果物名を変換した新しいリストを簡単に作成することができます。</p>
+<p>`map` メソッドのコールバック関数には、実際には2つのパラメータがありますが、そのうちの1つがインデックスではなく、`要素（element）` の値自体です。正しい構文は以下の通りです：
+
+    ```javascript
+    array.map((element, index, array) => {
+        // コールバック関数の処理
+    });
+    ```
+    
+    `element` は現在の要素の値を表し、`index` はその要素のインデックスを表します。また、`array` は `map` メソッドが呼び出された配列そのものを表します。ただし、`array` パラメータは一般的にはあまり使用されません。
+    
+    したがって、`map` メソッドのコールバック関数には2つのパラメータがありますが、2番目のパラメータはインデックスであり、3番目のパラメータは配列そのものです。</p>
+
+    <p>.split("") メソッド</p>
+    <p>const word = "apple";
+        const splitWord = word.split("");
+        
+        console.log(splitWord);
+        // 出力: ["a", "p", "p", "l", "e"]
+        </p>
+    <p>.join("") メソッド</p>
+    <p>const letters = ["a", "p", "p", "l", "e"];
+        const joinedLetters = letters.join("");
+        
+        console.log(joinedLetters);
+        // 出力: "apple"
+        </p>
+    <p>
+        const fruits = ["apple", "banana", "orange"];
+        const joinedString = fruits.join(", "); // コンマとスペースを使って配列の要素を連結する
+        console.log(joinedString); // 出力: "apple, banana, orange"
+
+        .join("/n") // 改行
+    </p>
+</body>
+</html>
